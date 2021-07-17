@@ -9,8 +9,41 @@ class Product extends Model {}
 // set up fields and rules for Product model
 Product.init(
   {
-    // define columns
+   
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    price: {
+      type: DataTypes.DECIMAL(10,2),
+      allowNull: false,
+      unique: true,
+      validate: {
+        isDecimal: true
+      }
+    },
+    stock: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [10]
+      }
+    },
+    category_id: {
+      type: DataTypes.STRING, 
+      references: {
+        model: 'category',
+        key: 'id'
+      }
+    }
   },
+    
   {
     sequelize,
     timestamps: false,
