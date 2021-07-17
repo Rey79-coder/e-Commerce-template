@@ -32,11 +32,12 @@
     https://github.com/Rey79-coder/e-Commerce-template
 ## Questions:
     What's the best tool to use to link the back-end-with-the-front-end? 
-    What's the most common money transaction system is?
+    
+    What is the most common money transaction system is nowdays?
 ## email:
     reyna@echeriri.com
 
-## For additional questions about:
+## For additional questions:
    Please reach me out through my email: reyna@echeriri.com.
    Here is a video on how to work the application.
 
