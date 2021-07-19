@@ -6,11 +6,13 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // get all products
 router.get('/', (req, res) => {
   Product.findAll({
-    attributes: [
-      'id', 
-      'category_name', 
-      'tag_name'
-    ]
+
+    attributes: { include: [
+      'id',
+      'product_name',
+      'price', 
+      'stock',
+      'category_id']}
   })
     // be sure to include its associated Category and Tag data
   .then(productData => res.json(productData))
@@ -46,22 +48,15 @@ router.get('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-  // be sure to include its associated Category and Tag data
+
 
 // create new product
 router.post('/', (req, res) => {
-  /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
-  */
+
     Product.create({
       id: req.body.id,
       product_name: req.body.product_name,
-      price: req.body.id,
+      price: req.body.price,
       stock: req.body.stock,
       tagIds: req.res.tagIds
     })
@@ -71,9 +66,6 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
   });
-
-
-
 
 
 
