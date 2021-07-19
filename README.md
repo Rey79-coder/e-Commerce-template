@@ -44,6 +44,6 @@
 
 #[Video](https://youtu.be/xJ6Zq3FgdpI)
 
-For illustration purposes here is a snapshot of real live instance:
+Echeriri means from Earth, and austronauts love the brand:
 #[Images](https://github.com/Rey79-coder/e-Commerce-template/blob/main/assets/img/astronaut.jpg)
 
