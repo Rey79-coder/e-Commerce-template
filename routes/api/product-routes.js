@@ -75,11 +75,12 @@ router.put('/:id', (req, res) => {
   Product.update(req.body, {
     where: {
       id: req.params.id,
+      product_name: req.body.product_name
     },
   })
     .then((product) => {
       // find all associated tags from ProductTag
-      return ProductTag.findAll({ where: { product_id: req.params.id } });
+      return ProductTag.findAll({ where: { product_id: req.params.id, product_name: req.params.product_name } });
     })
     .then((productTags) => {
       // get list of current tag_ids

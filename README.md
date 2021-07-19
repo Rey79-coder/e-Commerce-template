@@ -41,7 +41,7 @@
    Please reach me out through my email: reyna@echeriri.com.
    Here is a video on how to work the application.
 
-#[Video](Comming soon...)
+#[Video](https://youtu.be/xJ6Zq3FgdpI)
 
 For illustration purposes here is a snapshot of real live instance:
 #[Images](Comming soon...)
